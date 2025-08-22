@@ -111,3 +111,21 @@ This entity handles the transaction details for each booking.
 - Bookings and Reviews: A *Booking* can have at most one *Review*. This is a one-to-one relationship. The *booking_id* in the *Reviews* table links to the *id* of the *Bookings* table.
 
 - Bookings and Payments: A *Booking* can have one or more *Payments* (e.g., a deposit and a final payment). For simplicity, we can treat this as a one-to-one relationship where a *Booking* has one *Payment*. The *booking_id* in the *Payments* table links to the *id* of the *Bookings* table.
+
+## Feature Breakdown
+This project is built around a set of core features that define the user experience and business logic of a booking platform. Each feature is designed to work together to provide a seamless, end-to-end service for both guests and property owners.
+
+1. **User Management**
+This feature handles all aspects of user authentication and profiles. It allows new users to register an account, log in securely, and manage their personal information. This is foundational to the application, as it enables users to become either a guest who can book properties or a host who can list them.
+
+2. **Property Management**
+This module empowers hosts to list, update, and manage their properties. It includes functionality for adding new property details, such as location, price, and descriptions, and for editing or removing existing listings. This feature is crucial for building the inventory of available accommodations on the platform.
+
+3. **Booking System**
+The booking system is the central component of the application's business logic. It allows guests to search for available properties, select check-in and check-out dates, and make a reservation. This feature manages the booking process, ensuring that property availability is accurately reflected and that a reservation is correctly created and associated with the user and property.
+
+4. **Review and Rating System**
+This feature allows guests to leave feedback on a property after their stay. Users can submit a rating and a written review, which helps future guests make informed decisions and provides valuable feedback to property owners. This system builds trust and transparency within the community, encouraging high-quality service from hosts.
+
+5. **Payment Processing**
+The payment processing feature handles secure transactions for all bookings. It integrates with a payment gateway to allow guests to pay for their reservations and ensures that the payment status is correctly recorded. This is a critical component for the financial integrity of the platform, as it manages the flow of funds between guests and hosts.
